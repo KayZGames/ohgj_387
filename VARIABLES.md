@@ -8,4 +8,4 @@ Replace variables in all files `%variable_name%`
 * `game_dir`
 * `game_desc`
 
-also replace `gamejam_template` (without `%`) with the same value as `game_dir`
+also replace `ohgj_387` (without `%`) with the same value as `game_dir`

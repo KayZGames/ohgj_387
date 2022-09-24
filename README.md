@@ -1,5 +1,5 @@
-# %game_name% for %gamejam_name%
+# %game_name% for OneHourGameJam 387
 
-## Theme: %gamejam_theme%
+## Theme: Checkmate
 
-[Play here](https://kayzgames.github.io/%game_dir%)
+[Play here](https://kayzgames.github.io/ohgj_387)
