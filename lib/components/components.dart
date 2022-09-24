@@ -32,3 +32,7 @@ class Controller extends Component {
     downright = false;
   }
 }
+
+class King extends Component {}
+
+class Ai extends Component {}

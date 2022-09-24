@@ -1,4 +1,4 @@
-# %game_name% for OneHourGameJam 387
+# Revenge of the King for OneHourGameJam 387
 
 ## Theme: Checkmate
 

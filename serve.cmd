@@ -1,1 +1,1 @@
-dart run build_runner serve --config dev
+dart run build_runner serve --config dev --delete-conflicting-outputs
