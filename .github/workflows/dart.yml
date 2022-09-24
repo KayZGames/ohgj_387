@@ -1,0 +1,41 @@
+name: Deploy gh-pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: dart-lang/setup-dart@v1.3
+        with:
+          sdk: dev
+      - uses: oleksiyrudenko/gha-git-credentials@v2-latest
+        with:
+          global: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        run: dart pub get
+
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      - name: Generate code
+        run: dart run build_runner build
+
+      - name: Analyze
+        run: dart analyze --fatal-infos
+
+      - name: Activate peanut
+        run: dart pub global activate peanut
+
+      - name: Build gh-pages
+        run: peanut
+
+      - name: Deploy to gh-pages
+        run: git push origin --set-upstream gh-pages --force
